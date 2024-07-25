@@ -16,3 +16,4 @@ use App\Http\Controllers\TestController;
 
 Route::get('/', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
+Route::get('/t', [TestController::class, 'index']);

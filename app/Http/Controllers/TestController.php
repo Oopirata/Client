@@ -192,17 +192,18 @@ class TestController extends Controller
                 CROSS JOIN DiskUsage disk;
                 ";
 
-        $body= DB::connection('hospital')->select($cpuquery);
+        $body= DB::connection('hospital')->select($quer);
         $body = $body[0];
         $body['name'] = env('HOSPITAL_NAME');
+        dd($body);
         $body['server'] = env('HOSPITAL_SERVER');
         $body = json_encode($body);
         $headers = [
             'Content-Type' => 'application/json'
           ];
-        $client = new Client();
-        $request = new Request('POST', 'http://192.168.68.101/api/cpu', $headers, $body);
-        dd($request->getBody()->getContents());
+          $client = new Client();
+          $request = new Request('POST', 'http://192.168.68.101/api/cpu', $headers, $body);
+          dd($request->getBody()->getContents());
         $res = $client->sendAsync($request)->wait();
         dd($res->getBody()->getContents());
         
