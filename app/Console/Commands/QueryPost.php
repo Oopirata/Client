@@ -63,7 +63,8 @@ class QueryPost extends Command
         $body['server'] = config('services.hospital.server');
         $body = json_encode($body);
         $headers = [
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
+            'api-password' => 'admin123'
           ];
         $client = new Client();
         $request = new Request('POST', 'http://192.168.68.101/api/queries', $headers, $body);

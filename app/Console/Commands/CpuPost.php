@@ -106,8 +106,8 @@ class CpuPost extends Command
         $body[0]->name = config('services.hospital.name');
         $body = trim(json_encode($body), '[]');
         $headers = [
-            'Content-Type' => 'application/json'
-            // 'apipassword' => 'admin123'
+            'Content-Type' => 'application/json',
+            'api-password' => 'admin123'
           ];
         $client = new Client();
         $request = new Request('POST', 'http://192.168.68.101/api/cpu', $headers, $body);
