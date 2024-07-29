@@ -86,7 +86,7 @@ class BackupPost extends Command
                 ON A.[server] = B.[server] AND A.[database_name] = B.[database_name] AND A.[last_db_backup_date] = B.[backup_finish_date] 
                 ORDER BY  
                 A.database_name ";
-        $body= DB::connection('hospital')->select($quer);
+        $body= DB::select($quer);
         $body['name'] = config('services.hospital.name');
         $body['server'] = config('services.hospital.server');
         $body = json_encode($body);

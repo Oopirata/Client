@@ -58,7 +58,7 @@ class QueryPost extends Command
                 AND deqs.last_execution_time >= DATEADD(MINUTE, -@lastNmin, GETDATE())
                 GROUP BY dest.TEXT, DB_NAME(CONVERT(int, epa.value))
                 ORDER BY SUM(deqs.execution_count) DESC;";
-        $body= DB::connection('hospital')->select($quer);
+        $body= DB::select($quer);
         $body['name'] = config('services.hospital.name');
         $body['server'] = config('services.hospital.server');
         $body = json_encode($body);

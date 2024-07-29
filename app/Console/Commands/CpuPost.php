@@ -102,7 +102,7 @@ class CpuPost extends Command
                     ";
 
 
-        $body= DB::connection('hospital')->select($cpuquery);
+        $body= DB::select($cpuquery);
         $body[0]->name = config('services.hospital.name');
         $body = trim(json_encode($body), '[]');
         $headers = [
