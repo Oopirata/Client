@@ -123,6 +123,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'api_password' => env('API_PASSWORD'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

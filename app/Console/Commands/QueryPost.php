@@ -64,10 +64,10 @@ class QueryPost extends Command
         $body = json_encode($body);
         $headers = [
             'Content-Type' => 'application/json',
-            'api-password' => 'admin123'
+            'api-password' => config('app.api_password')
           ];
         $client = new Client();
-        $request = new Request('POST', 'http://192.168.68.101/api/queries', $headers, $body);
+        $request = new Request('POST', 'http://elimspro.co.id:5656/prolimslog/api/queries', $headers, $body);
         $res = $client->sendAsync($request)->wait();
         Log::info($res->getBody()->getContents());
     }
