@@ -22,10 +22,14 @@ Dokumentasi ini menjelaskan langkah-langkah untuk menginstalasi dan mengkonfigur
 
 3. *Setup Environment File*
 
-    Setup file .env sesuai dengan kebutuhan.
-    
+    Setup file .env sesuai dengan kebutuhan seperti database connection dan juga data rumah sakit.
+   ```bash
+   HOSPITAL_NAME = 
+   HOSPITAL_SERVER = 
+   API_PASSWORD = 
+    ```
 
-4. *Generate Application Key*
+5. *Generate Application Key*
 
     ```bash
     php artisan key:generate
