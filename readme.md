@@ -1,4 +1,3 @@
-# Laravel Project Installation Guide
 
 ## Pendahuluan
 
