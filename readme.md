@@ -1,4 +1,3 @@
-
 ## Pendahuluan
 
 Dokumentasi ini menjelaskan langkah-langkah untuk menginstalasi dan mengkonfigurasi proyek Laravel Anda, termasuk mengatur environment, menambahkan scheduler task, dan memastikan semuanya berjalan dengan baik.
